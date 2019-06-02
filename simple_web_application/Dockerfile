@@ -1,9 +1,11 @@
 FROM ruby:2.6.3-alpine3.9
 
-WORKDIR ./app
+WORKDIR /app
 
 RUN gem install sinatra
 
 COPY . .
 
-CMD "ruby main.rb"
+RUN pwd
+RUN ls
+CMD ruby main.rb
